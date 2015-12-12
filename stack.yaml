@@ -1,0 +1,91 @@
+# For more information, see: https://github.com/commercialhaskell/stack/blob/release/doc/yaml_configuration.md
+
+# Specifies the GHC version and set of packages available (e.g., lts-3.5, nightly-2015-09-21, ghc-7.10.2)
+resolver: ghcjs-0.2.0.20151029_ghc-7.10.2
+
+# Local packages, usually specified by relative directory name
+packages:
+- '.'
+- location:
+    git: git@github.com:ryantrinkle/reflex-dom.git
+    commit: 6ce47284bb4c9472f002f98437318a1ee6650ac4
+
+
+# Packages to be pulled from upstream that are not in the resolver (e.g., acme-missiles-0.3)
+extra-deps:
+# reflex-dom deps
+- StateVar-1.1.0.1
+- adjunctions-4.2.2
+- base-orphans-0.4.4
+- bifunctors-5
+- comonad-4.2.7.2
+- contravariant-1.3.3
+- cpphs-1.19.3
+- data-default-0.5.3
+- data-default-class-0.0.1
+- data-default-instances-base-0.0.1
+- data-default-instances-containers-0.0.1
+- data-default-instances-dlist-0.0.1
+- data-default-instances-old-locale-0.0.1
+- dependent-map-0.1.1.3
+- dependent-sum-0.2.1.0
+- dependent-sum-template-0.0.0.4
+- distributive-0.4.4
+- exception-transformers-0.4.0.2
+- exceptions-0.8.0.2
+- free-4.12.1
+- ghcjs-dom-0.2.3.0
+- haskell-src-exts-1.16.0.1
+- haskell-src-meta-0.6.0.13
+- kan-extensions-4.2.3
+- lens-4.13
+- nats-1.1
+- polyparse-1.11
+- prelude-extras-0.4.0.2
+- profunctors-5.1.2
+- ref-tf-0.4
+- reflection-2.1
+- reflex-0.3.2
+- safe-0.3.9
+- semigroupoids-5.0.0.4
+- semigroups-0.17.0.1
+- tagged-0.8.2
+- th-expand-syns-0.3.0.6
+- th-extras-0.0.0.2
+- th-lift-0.7.5
+- th-orphans-0.13.0
+- th-reify-many-0.1.3
+- these-0.6.1.0
+- transformers-compat-0.4.0.4
+- void-0.7.1
+
+
+
+# Override default flag values for local packages and extra-deps
+flags: {}
+
+# Extra package databases containing global packages
+extra-package-dbs: []
+
+# Control whether we use the GHC we find on the path
+# system-ghc: true
+
+# Require a specific version of stack, using version ranges
+# require-stack-version: -any # Default
+# require-stack-version: >= 0.1.4.0
+
+# Override the architecture used by stack, especially useful on Windows
+# arch: i386
+# arch: x86_64
+
+# Extra directories used by stack for building
+# extra-include-dirs: [/path/to/dir]
+# extra-lib-dirs: [/path/to/dir]
+
+compiler: ghcjs-0.2.0.20151029_ghc-7.10.2
+compiler-check: match-exact
+setup-info:
+  ghcjs:
+    source:
+      ghcjs-0.2.0.20151029_ghc-7.10.2:
+        url: "https://github.com/nrolland/ghcjs/releases/download/v0.2.0.20151029/ghcjs-0.2.0.20151029.tar.gz"
